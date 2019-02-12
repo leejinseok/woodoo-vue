@@ -1,6 +1,14 @@
 $asideBackImg: '/images/main_03.jpg';
 
-.aside-top {
+.indexPage .main-nav .logo {
+  color: #fff;
+}
+
+.indexPage .main-nav .menu a {
+  color: #fff;
+}
+
+.indexPage .aside-top {
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -12,7 +20,7 @@ $asideBackImg: '/images/main_03.jpg';
   box-sizing: border-box;
 }
 
-.aside-top::after {
+.indexPage .aside-top::after {
   content: '';
   position: absolute;
   left: 0;
@@ -23,7 +31,7 @@ $asideBackImg: '/images/main_03.jpg';
   z-index: 0;
 }
 
-.aside-top img {
+.indexPage .aside-top img {
   position: absolute;
   left: 50%;
   top: -100px;
@@ -32,12 +40,12 @@ $asideBackImg: '/images/main_03.jpg';
   z-index: 0;
 }
 
-.aside-top .aside-top__inner {
+.indexPage .aside-top .aside-top__inner {
   position: relative;
   z-index: 1;
 } 
 
-.aside-top .aside-top__inner .describe {
+.indexPage .aside-top .aside-top__inner .describe {
   color: #fff;
   font-size: 16px;
   font-weight: normal;
@@ -46,11 +54,11 @@ $asideBackImg: '/images/main_03.jpg';
   margin-top: 50px;
 }
 
-.aside-top .aside-top__inner .container {
+.indexPage .aside-top .aside-top__inner .container {
   margin-top: 50px;
 }
 
-.aside-top .aside-top__inner .container .card {
+.indexPage .aside-top .aside-top__inner .container .card {
   background-color: #fff;
   border-radius: 6px;
   width: 100%;

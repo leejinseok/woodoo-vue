@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="indexPage">
     <Header />
     <aside class="aside-top">
       <div class="aside-top__inner full-width">

@@ -12,6 +12,8 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+KR' },
+      { rel: 'stylesheet', href: '/css/reset.css' },
+      { rel: 'stylesheet', href: '/css/app.css' },
     ]
   },
   /*

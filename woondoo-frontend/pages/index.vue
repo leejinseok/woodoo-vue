@@ -32,8 +32,8 @@
 
 <script>
 import { mapState } from 'vuex'
-import Header from '../components/shared/Header'
-import '../static/css/index.css'
+import Header from '~/components/shared/Header'
+import '~/assets/scss/index.scss'
 
 export default {
   head: {

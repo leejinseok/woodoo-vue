@@ -3,17 +3,15 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'woondoo-vue',
+    title: '운두교회',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: '희년을 누리는 교회, 운두교회' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+KR' },
-      { rel: 'stylesheet', href: '/css/reset.css' },
-      { rel: 'stylesheet', href: '/css/app.css' },
     ]
   },
   /*

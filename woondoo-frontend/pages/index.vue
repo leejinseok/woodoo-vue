@@ -1,6 +1,6 @@
 <template>
   <div class="indexPage">
-    <Header isWhite="true"/>
+    <Header :isWhite="isWhite"/>
     <aside class="aside-top">
       <div class="aside-top__inner full-width">
         <h3 class="describe">
@@ -35,7 +35,10 @@ import { mapState } from 'vuex'
 import Header from '~/components/shared/Header'
 
 export default {
-  head: {
+  asyncData (context) {
+    return {
+      isWhite: true
+    }
   },
   fetch({ store }) {
     store.commit('increment')
@@ -44,9 +47,9 @@ export default {
     'counter'
   ]),
   methods: {
-    increment() {
+    increment () {
       this.$store.commit('increment')
-    }
+    },
   },
   created: function () {
   },

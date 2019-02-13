@@ -12,6 +12,7 @@
           <div class="col-4">
             <div class="card notice">
               <p>공지사항</p>
+              <Notices :notices="notices"/>
             </div>
           </div>
           <div class="col-4">
@@ -31,16 +32,26 @@
 </template>
 
 <script>
+import axios from 'axios'
 import { mapState } from 'vuex'
 import Header from '~/components/shared/Header'
+import Notices from '~/components/index/Notices/Notices'
 
 export default {
-  asyncData (context) {
+  data () {
     return {
       isWhite: true
     }
   },
-  fetch({ store }) {
+  asyncData (context) {
+    return axios.get(`https://jsonplaceholder.typicode.com/posts`)
+    .then((res) => {
+      return { 
+        notices: res.data 
+      }
+    })
+  },
+  fetch({ store, params }) {
     store.commit('increment')
   },
   computed: mapState([
@@ -52,9 +63,11 @@ export default {
     },
   },
   created: function () {
+    console.log(this);
   },
   components: {
-    Header
+    Header,
+    Notices
   }
 }
 </script>

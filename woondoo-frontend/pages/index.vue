@@ -1,5 +1,5 @@
 <template>
-  <div class="indexPage">
+  <div>
     <Header :isWhite="isWhite"/>
     <aside class="aside-top">
       <div class="aside-top__inner full-width">
@@ -7,25 +7,6 @@
           희년을 누리는 교회, <br>
           운두교회에 오신 여러분을 환영합니다.
         </h3>
-
-        <div class="container">
-          <div class="col-4">
-            <div class="card notice">
-              <p>공지사항</p>
-              <Notices :notices="notices"/>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card gallery">
-              <p>갤러리</p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card gallery">
-              <p></p>
-            </div>
-          </div>
-        </div>
       </div>
     </aside>
   </div>
@@ -35,7 +16,7 @@
 import axios from 'axios'
 import { mapState } from 'vuex'
 import Header from '~/components/shared/Header'
-import Notices from '~/components/index/Notices/Notices'
+import Notice from '~/components/index/Notice/Notice'
 
 export default {
   data () {
@@ -47,7 +28,7 @@ export default {
     return axios.get(`https://jsonplaceholder.typicode.com/posts`)
     .then((res) => {
       return { 
-        notices: res.data 
+        notices: res.data.slice(0, 10)
       }
     })
   },
@@ -67,7 +48,7 @@ export default {
   },
   components: {
     Header,
-    Notices
+    Notice
   }
 }
 </script>
@@ -121,14 +102,4 @@ $asideBackImg: '/images/main_03.jpg';
   margin-top: 50px;
 }
 
-.aside-top .aside-top__inner .container {
-  margin-top: 50px;
-}
-
-.aside-top .aside-top__inner .container .card {
-  background-color: #fff;
-  border-radius: 6px;
-  width: 100%;
-  height: 300px;;
-}
 </style>
